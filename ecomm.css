@@ -18,9 +18,22 @@ a {
 
 } 
 
+
+
 img {
-    width: 100%;
+    /* width: 50%; */
 }
+
+.hello {
+    width: 80%;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
  .nav__container {
     width: 100%;
@@ -97,15 +110,20 @@ li {
 header {
     height: calc(100vh - 80px);
     background-color: lightgreen;
+    position: relative;
 }
 
 .header__container {
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
-    height: 100%;
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+
 }
 
 .purple {
@@ -121,7 +139,8 @@ h1 {
 
 h2 {
     font-size: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 60px;
     text-align: center;
 }
+
 
