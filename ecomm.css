@@ -22,6 +22,8 @@ a {
 
 img {
     /* width: 50%; */
+    height: 100%;
+    max-height: 50vh;
 }
 
 .hello {
@@ -39,7 +41,7 @@ figure {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto; 
     align-items: center;
     padding: 0 24px;
@@ -108,9 +110,12 @@ li {
 }
 
 header {
+    /* margin-top: 32px; */
     height: calc(100vh - 80px);
     background-color: lightgreen;
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .header__container {
@@ -120,10 +125,20 @@ header {
     height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     position: relative;
     align-items: center;
+    justify-content: space-around;
+}
 
+.header__description {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    margin-bottom: 24px;
 }
 
 .purple {
@@ -132,6 +147,7 @@ header {
 
 h1 {
     font-size: 56px;
+    margin-top: 64px;
     color: #7342d6;
     margin-bottom: 24px;
     text-align: center;
@@ -143,4 +159,25 @@ h2 {
     text-align: center;
 }
 
+.btn {
+    background-color: #7342d6;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+}
 
+.header__image--wrapper {
+    padding: 20px;
+}
+
+.container {
+    padding: 56px 0;
+}
+
+.row {
+    width: 100%;
+    /*so it doesnt stretch the full span of a big screem*/
+    max-width: 1200px;
+}
