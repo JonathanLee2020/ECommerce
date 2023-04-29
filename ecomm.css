@@ -129,6 +129,7 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
 .menu__backdrop {
@@ -143,6 +144,22 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* we will replace display none with smth else so we can aniimate it form display none to display flex */
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+
 }
 
 .menu__links {
@@ -436,4 +453,14 @@ footer {
 
 .fas {
     size: 1000px;
+}
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
 }

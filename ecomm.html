@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="ecomm.css"> 
     <script src="https://kit.fontawesome.com/3c5525aad7.js" crossorigin="anonymous"></script>
+    <script src = "index.js"></script>
     <title>Ecommerce App</title>
 </head>
 <body>
@@ -26,38 +27,39 @@
                 <li class="nav__link link__hover-effect link__hover-effect--purple">
                     <a href="#">Books</a>
                 </li>
-            </ul>
-            </div>
-            <button class="btn__menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-                <button class="btn__menu btn__menu--close">
-                    <i class="fa-solid fa-xmark"></i>
+                </ul>
+            
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                        
+
+                        <ul class="menu__links">
+
+                            <li class="menu__list">
+                                <a href="#" class="menu__link" onclick="closeMenu()">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="menu__list">
+                                <a href="#featured" class="menu__link" onclick="closeMenu()">
+                                    Books
+                                </a>
+                            </li>
+                            <li class="menu__list">
+                                <a href="#explore" class="menu__link" onclick="closeMenu()">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+                        
                     
-
-                    <ul class="menu__links">
-
-                        <li class="menu__list">
-                            <a href="#" class="menu__link">
-                                Home
-                            </a>
-                        </li>
-                        <li class="menu__list">
-                            <a href="#" class="menu__link">
-                                Books
-                            </a>
-                        </li>
-                        <li class="menu__list">
-                            <a href="#" class="menu__link">
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-                    
-                
+                </div>
             </div>
         </nav>
         <header>
