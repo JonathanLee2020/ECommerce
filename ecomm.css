@@ -264,9 +264,9 @@ h2 {
 
 }
 
-.book__img {
+/* .book__img {
     max-height: 380px;
-}
+} */
 
 .books {
     display: flex;
@@ -278,12 +278,19 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: all 300ms ease;
 }
 
 .book__img--wrapper {
     margin-bottom: 8px;
     /* border-radius: 4px;
     overflow: hidden; */
+}
+
+.book__img {
+    max-height: 380px;
+    transition: all 300ms ease;
+    border-radius: 4px;
 }
 
 .book:hover .book__img {
