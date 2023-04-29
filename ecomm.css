@@ -192,7 +192,16 @@ h2 {
     /*so it doesnt stretch the full span of a big screem*/
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.row__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* HIGHLIGHTS */
@@ -304,7 +313,7 @@ h2 {
     max-width: 100%;
     flex-grow: 0;
     display: inline-block;
-    margin: 8px 16px;
+    margin: 4px 16px;
 }
 
 .book__rating {
@@ -328,10 +337,17 @@ h2 {
 .book__description {
     display: flex;
     flex-direction: column;
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
 }
 
 .small {
     background-color: blue;
-    width: 120%;
+    /* width: 120%; */
+    height: 100%;
+}
+
+/* explore */
+
+#explore {
+    background-color: green;
 }
