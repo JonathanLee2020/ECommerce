@@ -192,6 +192,7 @@ h2 {
     /*so it doesnt stretch the full span of a big screem*/
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 /* HIGHLIGHTS */
@@ -258,7 +259,7 @@ h2 {
     margin-bottom: 16px;
 }
 
-#features {
+#featured {
     background-color: brown;
     padding-top: 8vw;
 
@@ -273,12 +274,14 @@ h2 {
 }
 
 .book {
+    display: flex;
     width: 25%;
     padding: 24px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 300ms ease;
+    flex-wrap: wrap;
+    /* transition: all 300ms ease; NOT NECESSARY*/
 }
 
 .book__img--wrapper {
@@ -315,4 +318,20 @@ h2 {
     padding-right: 6px;
     /* margin: 8px 16px; */
 
+}
+
+/* LATEST BOOKS */
+.books {
+    flex-wrap: wrap;
+}
+
+.book__description {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgoldenrod;
+}
+
+.small {
+    background-color: blue;
+    width: 120%;
 }
