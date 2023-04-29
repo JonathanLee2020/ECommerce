@@ -351,3 +351,32 @@ h2 {
 #explore {
     background-color: green;
 }
+
+/* FOOTER */ 
+
+footer {
+    background-color: #242424;
+}
+
+.footer__logo--img {
+    filter: grayscale(1) invert(1);
+}
+
+.footer__link, 
+.footer__copyright {
+    color: #fff;
+}
+
+
+.footer__logo {
+    display: flex;
+}
+
+.footer__links {
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.footer__link {
+    padding: 0 8px;
+}
