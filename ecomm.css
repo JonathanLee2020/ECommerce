@@ -20,6 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.click {
+    cursor: pointer;
+}
+
 body {
     /* this prevents wave from overflowing */
     max-width: 100vw;
@@ -119,6 +123,13 @@ li {
     width: 100%;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+}
+
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
 }
@@ -152,7 +163,7 @@ header {
 }
 
 button {
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .purple {
@@ -383,4 +394,8 @@ footer {
 
 .footer__link {
     padding: 0 8px;
+}
+
+.fas {
+    size: 1000px;
 }
