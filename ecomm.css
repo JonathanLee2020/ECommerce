@@ -26,8 +26,6 @@ body {
  nav {
     height: 80px;
     display: flex;
-
-
 } 
 
 
@@ -88,7 +86,7 @@ li {
     position: relative;
 }
 
-.link__hover-effect--black:after {
+.link__hover-effect--purple:after {
     position: absolute;
     content: "";
     bottom: -3px;
@@ -100,13 +98,13 @@ li {
     transition: all 300ms ease;
 }
 
-.link__hover-effect--white:after {
+.link__hover-effect--black:after {
     position: absolute;
     content: "";
     bottom: -3px;
     height: 3px;
-    /* width: 100%; */
-     background-color: white; 
+    width: 100%;
+     background-color: black; 
     width: 0;
     right: 0;
     transition: all 300ms ease;
@@ -262,6 +260,39 @@ h2 {
 
 #features {
     background-color: lightgreen;
-    height: 1000px;
+    padding-top: 8vw;
 
+}
+
+.book__img {
+    max-height: 380px;
+}
+
+.books {
+    display: flex;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+}
+
+.book__title {
+    max-width: 100%;
+    flex-grow: 0;
+    display: inline-block;
+    margin: 80px 0;
 }
