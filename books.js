@@ -3,29 +3,31 @@
 console.log(`hello schnooks munchers`)
 
 function renderBooks () {
-  let booksWrapper = document.querySelector('.books');
+  const booksWrapper = document.querySelector('.books');
+  let books = getBooks();
+  console.log(books);
   console.log(`munch`);
-// `<div class="book">
-//   <figure class="book__img--wrapper">
-//     <img class="book__img" src="assets/atomic habits.jpg" alt="">
-//   </figure>
-//   <div class="book__description">
-//     <div class="book__title">
-//       Ryjewers SLDL
-//     </div>
-//     <div class="book__ratings">
-//       <i class="fas fa-star"></i>
-//       <i class="fas fa-star"></i>
-//       <i class="fas fa-star"></i>
-//       <i class="fas fa-star"></i>
-//       <i class="fas fa-star-half-alt"></i>
-//     </div>
-//     <div class="book__price">
-//       <span class="book__price--normal">$59.95</span> $14.95
-//     </div>
-//   </div>
-  
-// </div>`
+  booksWrapper.innerHTML =
+  `<div class="book">
+    <figure class="book__img--wrapper">
+        <img class="book__img" src="${books[0].url}" alt="CTCI">
+    </figure>
+    <div class="book__description">
+      <text class="book__title link__hover-effect link__hover-effect--black">   
+        ${books[0].title}
+        </text>
+        <div class="book__rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="book__price">
+            <span class="book__price--normal">$69.95</span> $14.95
+        </div>
+    </div>
+</div>` 
+console.log(`finished `)
 
 }
 
@@ -38,8 +40,8 @@ function getBooks() {
   return [
     {
       id: 1,
-      title: "Crack the Coding Interview",
-                url: "assets/crack the coding interview.png",
+      title: "schnooks munch",
+      url: "assets/crack the coding interview.png",
       originalPrice: 49.95,
       salePrice: 14.95,
       rating: 4.5,
