@@ -7,14 +7,15 @@ function renderBooks () {
   let books = getBooks();
   console.log(books);
   console.log(`munch`);
-  booksWrapper.innerHTML =
-  `<div class="book">
+  let bookList = books.map(book => {
+    console.log(book);
+    return `<div class="book">
     <figure class="book__img--wrapper">
-        <img class="book__img" src="${books[0].url}" alt="CTCI">
+        <img class="book__img" src="${book.url}" alt="CTCI">
     </figure>
     <div class="book__description">
       <text class="book__title link__hover-effect link__hover-effect--black">   
-        ${books[0].title}
+        ${book.title}
         </text>
         <div class="book__rating">
             <i class="fa-solid fa-star"></i>
@@ -26,7 +27,11 @@ function renderBooks () {
             <span class="book__price--normal">$69.95</span> $14.95
         </div>
     </div>
-</div>` 
+  </div>` 
+  })
+
+  console.log(bookList)
+  booksWrapper.innerHTML = bookList;
 console.log(`finished `)
 
 }
