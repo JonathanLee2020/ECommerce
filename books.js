@@ -1,4 +1,37 @@
 
+// FAKE DATA
+console.log(`hello schnooks munchers`)
+
+function renderBooks () {
+  let booksWrapper = document.querySelector('.books');
+  console.log(`munch`);
+// `<div class="book">
+//   <figure class="book__img--wrapper">
+//     <img class="book__img" src="assets/atomic habits.jpg" alt="">
+//   </figure>
+//   <div class="book__description">
+//     <div class="book__title">
+//       Ryjewers SLDL
+//     </div>
+//     <div class="book__ratings">
+//       <i class="fas fa-star"></i>
+//       <i class="fas fa-star"></i>
+//       <i class="fas fa-star"></i>
+//       <i class="fas fa-star"></i>
+//       <i class="fas fa-star-half-alt"></i>
+//     </div>
+//     <div class="book__price">
+//       <span class="book__price--normal">$59.95</span> $14.95
+//     </div>
+//   </div>
+  
+// </div>`
+
+}
+
+setTimeout(() => {
+  renderBooks();
+})
 
 // FAKE DATA
 function getBooks() {
