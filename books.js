@@ -7,12 +7,12 @@ function renderBooks (filter) {
   let books = getBooks();
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
-    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice));
+    books.sort((a, b) => parseFloat(a.salePrice || a.originalPrice) - parseFloat(a.salePrice || b.originalPrice));
   }
 
   if (filter === `HIGH_TO_LOW`) {
     console.log(`high-to-low selected`);
-    books.sort((a, b) => parseFloat(b.originalPrice) - parseFloat(a.originalPrice));
+    books.sort((a, b) => parseFloat(b.salePrice || b.originalPrice) - parseFloat(a.salePrice || .a.originalPrice));
   }
 
   if (filter === `RATING`) {
