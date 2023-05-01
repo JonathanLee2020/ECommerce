@@ -4,7 +4,11 @@ console.log(`hello schnooks munchers`)
 
 async function renderBooks (filter) {
   const booksWrapper = document.querySelector('.books');
+
+  document.body.classList += ' .books__loading';
+
   let books = await getBooks();
+  document.body.classList
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
     books.sort((a, b) => parseFloat(a.salePrice || a.originalPrice) - parseFloat(a.salePrice || b.originalPrice));

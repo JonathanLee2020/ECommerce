@@ -22,7 +22,15 @@ html {
 
 .click {
     cursor: pointer;
+    transition: all 300ms ease;
 }
+
+button:hover {
+    transform: scale(1.03);
+    background-color: #662d91;
+}
+
+
 
 body {
     /* this prevents wave from overflowing */
