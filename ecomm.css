@@ -59,7 +59,7 @@ figure {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto; 
     align-items: center;
     padding: 0 24px;
@@ -81,7 +81,7 @@ li {
     margin-left: 16px;
 }
 
-.nav__link a {
+.nav__link, a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;

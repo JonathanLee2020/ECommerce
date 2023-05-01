@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
   <link rel="stylesheet" href="ecomm.css">
-  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3c5525aad7.js" crossorigin="anonymous"></script>
   <script src="index.js"></script>
   <script src="books.js"></script>
 </head>
@@ -15,32 +15,43 @@
 <body id="books__body">
   <section>
     <nav>
-      <div class=" books__container">
+      <div class=" nav__container">
         <img class="logo" src="assets/Library.svg" alt="">
         <ul class="nav__links">
-          <li><a href="#" class="nav__link">Home</a></li>
-          <li><a href="#" class="nav__link">Contact</a></li>
-          <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
+          <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">Home</a></li>
+          <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple">Contact</a></li>
+          <li><a href="#" class="nav__link link__hover-effect link__hover-effect--purple nav__link--primary">Books</a></li>
         </ul>
         <button class="btn__menu" onclick="openMenu()">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="menu__backdrop" style="visibility: hidden;">
+        
+        <div class="menu__backdrop">
           <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-            <i class="fas fa-times"></i>
+              <i class="fa-solid fa-xmark"></i>
           </button>
-          <ul class="menu__links">
-            <li class="menu__list">
-              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
-            </li>
-            <li class="menu__list">
-              <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
-            </li>
-            <li class="menu__list">
-              <a class="menu__link no-cursor" onclick="closeMenu()">Contacts</a>
-            </li>
-          </ul>
-        </div>
+              
+              <ul class="menu__links">
+
+                  <li class="menu__list">
+                      <a href="#" class="menu__link" onclick="closeMenu()">
+                          Home
+                      </a>
+                  </li>
+                  <li class="menu__list">
+                      <a href="#featured" class="menu__link" onclick="closeMenu()">
+                          Books
+                      </a>
+                  </li>
+                  <li class="menu__list">
+                      <a href="#explore" class="menu__link" onclick="closeMenu()">
+                          Contact
+                      </a>
+                  </li>
+
+              </ul>
+              
+      </div>
       </div>
     </nav>
   </section>
@@ -88,7 +99,7 @@
       <div class="row row__column">
         <a href="#">
           <figure class="footer__logo">
-            <img src="assets/Library.svg" class="footer__logo--img" alt="">
+            <img src="assets/Library.svg" class="logo footer__logo--img" alt="">
           </figure>
         </a>
         <div class="footer__list">
