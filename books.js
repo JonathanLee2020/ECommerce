@@ -5,14 +5,25 @@ console.log(`hello schnooks munchers`)
 function renderBooks (filter) {
   const booksWrapper = document.querySelector('.books');
   let books = getBooks();
-  console.log(`hello gamers, our filter is ${filter}`);
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
+    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice));
   }
-  // console.log(books);
-  // console.log(`our gaming filter is ${filter}`);
+
+  if (filter === `HIGH_TO_LOW`) {
+    console.log(`high-to-low selected`);
+    books.sort((a, b) => parseFloat(b.originalPrice) - parseFloat(a.originalPrice));
+  }
+
+  if (filter === `RATING`) {
+    console.log(`RATING selected`);
+    books.sort((a, b) => b.rating - a.rating);
+  }
+
+  
+
+ 
   let bookList = books.map(book => {
-    // console.log(book);
     return `<div class="book">
     <figure class="book__img--wrapper">
         <img class="book__img" src="${book.url}" alt="CTCI">
@@ -22,10 +33,7 @@ function renderBooks (filter) {
         ${book.title}
         </text>
         <div class="book__rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+            ${createRating(book.rating)}
         </div>
         <div class="book__price">
             <span>$${book.originalPrice.toFixed(2)}</span>
@@ -41,7 +49,17 @@ console.log(`finished `)
 
 function filterBooks(event) {
   renderBooks(event.target.value);
-  
+}
+
+function createRating(rating) {
+  let output = "";
+  for (let i = 0; i < Math.floor(rating); i++) {
+    output+=`<i class="fas fa-star"></i>`
+  }
+  if (rating % 1 !== 0 ) {
+    output+=`<i class="fas fa-star-half-alt"></i>`
+  }
+  return output;
 }
 
 
