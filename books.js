@@ -64,10 +64,10 @@ function createRating(rating) {
 
 function createPrice (salePrice, originalPrice) {
   let output = "";
-  if (salePrice !== null) salePrice = parseFloat(salePrice).toFixed(2);;
+  if (salePrice !== null) salePrice = parseFloat(salePrice).toFixed(2);
   if (originalPrice !== null) originalPrice = parseFloat(originalPrice).toFixed(2);
-  if (salePrice !== null) output += `<span class="book__price--normal">${originalPrice}</span> ${salePrice}`
-  else output += originalPrice
+  if (salePrice !== null) output += `<span class="book__price--normal">$${originalPrice}</span> $${salePrice}`
+  else output += `$${originalPrice}`
   return output;
 }
 
