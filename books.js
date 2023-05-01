@@ -28,9 +28,9 @@ function renderBooks () {
         </div>
     </div>
   </div>` 
-  })
+  }).join("")
 
-  console.log(bookList)
+  // console.log(bookList)
   booksWrapper.innerHTML = bookList;
 console.log(`finished `)
 
