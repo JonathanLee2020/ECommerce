@@ -73,7 +73,7 @@ function createPrice (salePrice, originalPrice) {
 
 
 setTimeout(() => {
-  renderBooks();
+  // renderBooks();
 })
 
 // FAKE DATA
