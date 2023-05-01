@@ -2,13 +2,17 @@
 // FAKE DATA
 console.log(`hello schnooks munchers`)
 
-function renderBooks () {
+function renderBooks (filter) {
   const booksWrapper = document.querySelector('.books');
   let books = getBooks();
-  console.log(books);
-  console.log(`munch`);
+  console.log(`hello gamers, our filter is ${filter}`);
+  if (filter === `LOW_TO_HIGH`) {
+    console.log(`low-to-high selected`);
+  }
+  // console.log(books);
+  // console.log(`our gaming filter is ${filter}`);
   let bookList = books.map(book => {
-    console.log(book);
+    // console.log(book);
     return `<div class="book">
     <figure class="book__img--wrapper">
         <img class="book__img" src="${book.url}" alt="CTCI">
@@ -35,8 +39,9 @@ function renderBooks () {
 console.log(`finished `)
 }
 
-function filterBooks() {
-  console.log("hello gamers");
+function filterBooks(event) {
+  renderBooks(event.target.value);
+  
 }
 
 
