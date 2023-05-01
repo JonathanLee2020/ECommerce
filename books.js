@@ -36,7 +36,7 @@ function renderBooks (filter) {
             ${createRating(book.rating)}
         </div>
         <div class="book__price">
-            <span>$${book.originalPrice.toFixed(2)}</span>
+            <span>${createPrice(book.salePrice, book.originalPrice)}</span>
         </div>
     </div>
   </div>` 
@@ -59,6 +59,15 @@ function createRating(rating) {
   if (rating % 1 !== 0 ) {
     output+=`<i class="fas fa-star-half-alt"></i>`
   }
+  return output;
+}
+
+function createPrice (salePrice, originalPrice) {
+  let output = "";
+  if (salePrice !== null) salePrice = parseFloat(salePrice).toFixed(2);;
+  if (originalPrice !== null) originalPrice = parseFloat(originalPrice).toFixed(2);
+  if (salePrice !== null) output += `<span class="book__price--normal">${originalPrice}</span> ${salePrice}`
+  else output += originalPrice
   return output;
 }
 
