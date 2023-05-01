@@ -24,7 +24,7 @@ function renderBooks () {
             <i class="fa-solid fa-star"></i>
         </div>
         <div class="book__price">
-            <span class="book__price--normal">$69.95</span> $14.95
+            <span>$${book.originalPrice.toFixed(2)}</span>
         </div>
     </div>
   </div>` 
@@ -33,8 +33,12 @@ function renderBooks () {
   // console.log(bookList)
   booksWrapper.innerHTML = bookList;
 console.log(`finished `)
-
 }
+
+function filterBooks() {
+  console.log("hello gamers");
+}
+
 
 setTimeout(() => {
   renderBooks();
