@@ -1,4 +1,3 @@
-console.log("hello gamers we're doing some gaming today")
 
 function openMenu() {
     //adds class to body to let us know the menu is open

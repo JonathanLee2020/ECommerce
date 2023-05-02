@@ -268,6 +268,25 @@ h2 {
     border: none;
 }
 
+.small__btn {
+    background-color: #7342d6;
+    color: white;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.small__btn:hover {
+    transform: scale(1.1);
+    color:white;
+    background-color: #720e9e;
+}
+
+
+
 .header__image--wrapper {
     padding: 20px;
     z-index: 50;
@@ -406,7 +425,6 @@ h2 {
     flex-grow: 0;
     display: inline-block;
     margin: px 16px;
-    background-color: chartreuse;
 }
 
 .book__rating {
@@ -434,7 +452,6 @@ h2 {
 .book__description {
     /* display: flex; */
     /* flex-direction: column; */
-    background-color: wheat;
     text-align: left;
 }
 
@@ -457,6 +474,13 @@ h2 {
 
 footer {
     background-color: #242424;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__logo--img {

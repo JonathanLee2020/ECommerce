@@ -5,12 +5,12 @@ let books;
 async function renderBooks (filter) {
   const booksWrapper = document.querySelector(".books");
 
-  booksWrapper.classList += ' books__loading';
+  booksWrapper.classList += ' books__loading'
 
   if (!books) {
     books = await getBooks();
   }
-
+  
   booksWrapper.classList.remove('books__loading')
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
@@ -71,6 +71,7 @@ function createRating(rating) {
 
 function createPrice (salePrice, originalPrice) {
   let output = "";
+  if (!salePrice) return `$${originalPrice.toFixed(2)}`;
   if (salePrice !== null) salePrice = parseFloat(salePrice).toFixed(2);
   if (originalPrice !== null) originalPrice = parseFloat(originalPrice).toFixed(2);
   if (salePrice !== null) output += `<span class="book__price--normal">$${originalPrice}</span> $${salePrice}`
@@ -89,7 +90,7 @@ function getBooks() {
       resolve([
         {
           id: 1,
-          title: "schnooks munch",
+          title: "Cracking the Coding Interview",
           url: "assets/crack the coding interview.png",
           originalPrice: 49.95,
           salePrice: 14.95,
@@ -176,7 +177,6 @@ function getBooks() {
           rating: 4.5,
         },
       ])
-    }, 750);
-  })
-  return ;
+    }, 1000);
+  });
 }
