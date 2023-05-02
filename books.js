@@ -5,10 +5,10 @@ console.log(`hello schnooks munchers`)
 async function renderBooks (filter) {
   const booksWrapper = document.querySelector('.books');
 
-  document.body.classList += ' .books__loading';
+  booksWrapper.classList += ' books__loading';
 
   let books = await getBooks();
-  document.body.classList
+  booksWrapper.classList.remove('books__loading')
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
     books.sort((a, b) => parseFloat(a.salePrice || a.originalPrice) - parseFloat(a.salePrice || b.originalPrice));
@@ -77,7 +77,7 @@ function createPrice (salePrice, originalPrice) {
 
 
 setTimeout(() => {
-  // renderBooks();
+  renderBooks();
 })
 
 // FAKE DATA
