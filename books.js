@@ -1,13 +1,16 @@
 
 // FAKE DATA
-console.log(`hello schnooks munchers`)
+let books;
 
 async function renderBooks (filter) {
-  const booksWrapper = document.querySelector('.books');
+  const booksWrapper = document.querySelector(".books");
 
   booksWrapper.classList += ' books__loading';
 
-  let books = await getBooks();
+  if (!books) {
+    books = await getBooks();
+  }
+
   booksWrapper.classList.remove('books__loading')
   if (filter === `LOW_TO_HIGH`) {
     console.log(`low-to-high selected`);
@@ -78,8 +81,7 @@ function createPrice (salePrice, originalPrice) {
 
 setTimeout(() => {
   renderBooks();
-})
-
+});
 // FAKE DATA
 function getBooks() {
   return new Promise((resolve) => {
@@ -174,7 +176,7 @@ function getBooks() {
           rating: 4.5,
         },
       ])
-    }, 1000);
+    }, 750);
   })
   return ;
 }
